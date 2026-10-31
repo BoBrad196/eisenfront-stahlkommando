@@ -1,0 +1,11 @@
+{
+  "_info": "Fraktionen. color = Kartenfarbe/Teamfarbe. ai = vom Computer gesteuert.",
+  "factions": {
+    "spieler":     { "name": "Zentralmacht",        "color": "#2f6fd6", "ai": false },
+    "westbund":    { "name": "Westbund",            "color": "#e08a2c", "ai": true },
+    "nordpakt":    { "name": "Nordpakt",            "color": "#8a4fd6", "ai": true },
+    "ostblock":    { "name": "Ostunion",            "color": "#c43030", "ai": true },
+    "suedallianz": { "name": "Südallianz",          "color": "#3a9a4a", "ai": true },
+    "neutral":     { "name": "Unabhängig",          "color": "#9a9a92", "ai": true }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "_info": "Gebäude. size = Kacheln (quadratisch). power: + erzeugt, - verbraucht Strom. produces = Ertrag pro Minute (nur auf passendem Vorkommen). sight = Sichtweite in Kacheln. requires = benötigtes Gebäude in derselben Provinz. research = benötigte Forschung. coastal = muss am Meer stehen.",
+  "buildings": {
+    "bauhof": {
+      "name": "Bauhof",
+      "sight": 9,
+      "size": 3,
+      "hp": 1800,
+      "power": 10,
+      "cost": {
+        "geld": 3000
+      },
+      "time": 25,
+      "sprite": "building.bauhof",
+      "desc": "Hauptquartier der Provinz. Nötig für jeden Bau."
+    },
+    "kraftwerk": {
+      "name": "Kraftwerk",
+      "sight": 5,
+      "size": 2,
+      "hp": 700,
+      "power": 100,
+      "cost": {
+        "geld": 400,
+        "eisen": 30
+      },
+      "time": 8,
+      "sprite": "building.kraftwerk",
+      "requires": "bauhof",
+      "coalPerMin": 4,
+      "desc": "Erzeugt Strom. Verbrennt Kohle – ohne Kohle nur halbe Leistung."
+    },
+    "kohlebergwerk": {
+      "name": "Kohlebergwerk",
+      "sight": 5,
+      "size": 2,
+      "hp": 600,
+      "power": -15,
+      "cost": {
+        "geld": 500,
+        "eisen": 20
+      },
+      "time": 10,
+      "sprite": "building.kohlebergwerk",
+      "requires": "kraftwerk",
+      "deposit": "kohle",
+      "produces": {
+        "kohle": 40
+      },
+      "desc": "Muss auf einem Kohlevorkommen stehen."
+    },
+    "eisenbergwerk": {
+      "name": "Eisenbergwerk",
+      "sight": 5,
+      "size": 2,
+      "hp": 600,
+      "power": -20,
+      "cost": {
+        "geld": 600,
+        "kohle": 20
+      },
+      "time": 12,
+      "sprite": "building.eisenbergwerk",
+      "requires": "kraftwerk",
+      "deposit": "eisen",
+      "produces": {
+        "eisen": 30
+      },
+      "desc": "Muss auf einem Eisenvorkommen stehen."
+    },
+    "goldmine": {
+      "name": "Goldmine",
+      "sight": 5,
+      "size": 2,
+      "hp": 600,
+      "power": -25,
+      "cost": {
+        "geld": 1000,
+        "eisen": 50,
+        "kohle": 30
+      },
+      "time": 15,
+      "sprite": "building.goldmine",
+      "requires": "kraftwerk",
+      "deposit": "gold",
+      "produces": {
+        "gold": 8,
+        "geld": 120
+      },
+      "desc": "Muss auf einem Goldvorkommen stehen. Bringt Gold und etwas Geld."
+    },
+    "kaserne": {
+      "name": "Kaserne",
+      "sight": 6,
+      "size": 2,
+      "hp": 800,
+      "power": -20,
+      "cost": {
+        "geld": 500,
+        "eisen": 20
+      },
+      "time": 10,
+      "sprite": "building.kaserne",
+      "requires": "kraftwerk",
+      "desc": "Bildet Infanterie aus."
+    },
+    "panzerfabrik": {
+      "name": "Panzerfabrik",
+      "sight": 6,
+      "size": 3,
+      "hp": 1400,
+      "power": -40,
+      "cost": {
+        "geld": 1500,
+        "eisen": 150,
+        "kohle": 50
+      },
+      "time": 18,
+      "sprite": "building.panzerfabrik",
+      "requires": "kaserne",
+      "desc": "Baut Fahrzeuge."
+    },
+    "verwaltung": {
+      "name": "Verwaltung",
+      "sight": 6,
+      "size": 2,
+      "hp": 700,
+      "power": -15,
+      "cost": {
+        "geld": 1200,
+        "eisen": 40
+      },
+      "time": 14,
+      "sprite": "building.verwaltung",
+      "requires": "kraftwerk",
+      "incomeBonus": 0.25,
+      "desc": "+25 % Einnahmen aller Dörfer dieser Provinz (max. 1)."
+    },
+    "forschungszentrum": {
+      "name": "Forschungszentrum",
+      "sight": 6,
+      "size": 2,
+      "hp": 900,
+      "power": -40,
+      "cost": {
+        "geld": 1500,
+        "eisen": 100
+      },
+      "time": 16,
+      "sprite": "building.forschungszentrum",
+      "requires": "kraftwerk",
+      "desc": "Ermöglicht Forschung für das ganze Reich."
+    },
+    "flugfeld": {
+      "name": "Flugfeld",
+      "sight": 7,
+      "size": 3,
+      "hp": 1200,
+      "power": -30,
+      "cost": {
+        "geld": 2000,
+        "eisen": 200,
+        "kohle": 50
+      },
+      "time": 20,
+      "sprite": "building.flugfeld",
+      "requires": "kraftwerk",
+      "research": "luftfahrt",
+      "desc": "Baut Sturzkampfbomber und Jagdflugzeuge."
+    },
+    "werft": {
+      "name": "Werft",
+      "sight": 8,
+      "size": 3,
+      "hp": 1300,
+      "power": -25,
+      "cost": {
+        "geld": 1500,
+        "eisen": 150
+      },
+      "time": 18,
+      "sprite": "building.werft",
+      "requires": "kraftwerk",
+      "coastal": true,
+      "desc": "Baut Schiffe. Muss direkt am Meer stehen. Halbiert die Dauer von Seeüberfahrten aus dieser Provinz."
+    },
+    "flakstellung": {
+      "name": "Flakstellung",
+      "sight": 9,
+      "size": 1,
+      "hp": 500,
+      "power": -10,
+      "cost": {
+        "geld": 700,
+        "eisen": 90,
+        "kohle": 20
+      },
+      "time": 10,
+      "sprite": "building.flakstellung",
+      "requires": "kraftwerk",
+      "weapon": "flak",
+      "range": 8,
+      "damage": 40,
+      "rof": 1.0,
+      "desc": "Flugabwehr – trifft nur Luftziele."
+    },
+    "geschuetzturm": {
+      "name": "Geschützturm",
+      "sight": 8,
+      "size": 1,
+      "hp": 600,
+      "power": -10,
+      "cost": {
+        "geld": 600,
+        "eisen": 80,
+        "kohle": 20
+      },
+      "time": 10,
+      "sprite": "building.geschuetzturm",
+      "requires": "kraftwerk",
+      "weapon": "kanone",
+      "range": 6,
+      "damage": 35,
+      "rof": 1.8,
+      "desc": "Verteidigungsturm."
+    },
+    "stacheldraht": {
+      "name": "Stacheldraht",
+      "sight": 3,
+      "size": 1,
+      "hp": 260,
+      "power": 0,
+      "cost": {
+        "geld": 60,
+        "eisen": 25
+      },
+      "time": 3,
+      "sprite": "building.stacheldraht",
+      "requires": "kaserne",
+      "desc": "Hält Infanterie auf. Panzer fahren hindurch und reißen ihn nieder.",
+      "wall": true,
+      "blocks": {
+        "inf": true,
+        "tank": false
+      },
+      "crossDamage": 30
+    },
+    "panzersperre": {
+      "name": "Panzersperre",
+      "sight": 3,
+      "size": 1,
+      "hp": 900,
+      "power": 0,
+      "cost": {
+        "geld": 150,
+        "eisen": 80
+      },
+      "time": 5,
+      "sprite": "building.panzersperre",
+      "requires": "kaserne",
+      "desc": "Igel und Höcker aus Stahl. Stoppt Panzer, Infanterie geht darum herum.",
+      "wall": true,
+      "blocks": {
+        "inf": false,
+        "tank": true
+      }
+    },
+    "schuetzengraben": {
+      "name": "Schützengraben",
+      "sight": 4,
+      "size": 1,
+      "hp": 500,
+      "power": 0,
+      "cost": {
+        "geld": 40,
+        "kohle": 10
+      },
+      "time": 4,
+      "sprite": "building.schuetzengraben",
+      "requires": "kaserne",
+      "desc": "Deckung für Infanterie. Panzer überrollen ihn nur langsam.",
+      "wall": true,
+      "blocks": {
+        "inf": false,
+        "tank": false
+      },
+      "slow": 0.45
+    },
+    "bunker": {
+      "name": "Bunker mit MG-Nest",
+      "sight": 7,
+      "size": 2,
+      "hp": 1600,
+      "power": 0,
+      "cost": {
+        "geld": 450,
+        "eisen": 120,
+        "kohle": 40
+      },
+      "time": 14,
+      "sprite": "building.bunker",
+      "requires": "kaserne",
+      "weapon": "mg",
+      "range": 7,
+      "damage": 18,
+      "rof": 0.8,
+      "desc": "Betonbunker mit Maschinengewehr. Schützt die Besatzung und hält Gräben und Sperren."
+    }
+  }
+}

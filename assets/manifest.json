@@ -1,0 +1,2383 @@
+{
+  "_info": [
+    "Zuordnung Grafik-Schlüssel -> Datei (relativ zu assets/). Eigene Grafiken (PNG/SVG/WebP) hier eintragen oder Datei gleichen Namens ersetzen.",
+    "Bodenkacheln: Raute 64x32. Gebäude: Breite = Größe x 64; die untere Spitze der Grundfläche liegt unten in der Bildmitte.",
+    "sprites.anchor = Bodenpunkt im Einzelbild in Pixeln. sprites.frames = Anzahl Blickrichtungen nebeneinander (8 oder 16),",
+    "beginnend mit Südost (rechts unten), dann im Uhrzeigersinn. sprites.rows = Animationsbilder untereinander (Infanterie: Stehen, Schritt, Schritt).",
+    "Panzer haben zusätzlich ein Turm-Bild (Schlüssel + .turm), das sich unabhängig zur Zielrichtung dreht."
+  ],
+  "tile": {
+    "width": 64,
+    "height": 32
+  },
+  "images": {
+    "terrain.gras": "graphics/terrain/foto/gras.png",
+    "terrain.waldboden": "graphics/terrain/foto/waldboden.png",
+    "terrain.wasser": "graphics/terrain/foto/wasser.png",
+    "terrain.felsboden": "graphics/terrain/foto/felsboden.png",
+    "terrain.sand": "graphics/terrain/foto/sand.png",
+    "deposit.kohle": "graphics/terrain/foto/vorkommen_kohle.png",
+    "deposit.eisen": "graphics/terrain/foto/vorkommen_eisen.png",
+    "deposit.gold": "graphics/terrain/foto/vorkommen_gold.png",
+    "object.baum1": "graphics/terrain/foto/baum1.png",
+    "object.baum2": "graphics/terrain/foto/baum2.png",
+    "object.baum3": "graphics/terrain/foto/baum3.png",
+    "object.baum4": "graphics/terrain/foto/baum4.png",
+    "object.fels": "graphics/terrain/foto/fels.png",
+    "object.fels2": "graphics/terrain/foto/fels2.png",
+    "decor.gras": "graphics/terrain/deko_gras.svg",
+    "decor.trockengras": "graphics/terrain/deko_trockengras.svg",
+    "decor.blumen": "graphics/terrain/deko_blumen.svg",
+    "decor.steine": "graphics/terrain/deko_steine.svg",
+    "decor.busch": "graphics/terrain/deko_busch.svg",
+    "decor.farn": "graphics/terrain/deko_farn.svg",
+    "building.bauhof": "graphics/buildings/foto/bauhof.png",
+    "building.kraftwerk": "graphics/buildings/foto/kraftwerk.png",
+    "building.kohlebergwerk": "graphics/buildings/foto/kohlebergwerk.png",
+    "building.eisenbergwerk": "graphics/buildings/foto/eisenbergwerk.png",
+    "building.goldmine": "graphics/buildings/foto/goldmine.png",
+    "building.kaserne": "graphics/buildings/foto/kaserne.png",
+    "building.panzerfabrik": "graphics/buildings/foto/panzerfabrik.png",
+    "building.verwaltung": "graphics/buildings/foto/verwaltung.png",
+    "building.geschuetzturm": "graphics/buildings/foto/geschuetzturm.png",
+    "village.dorf": "graphics/buildings/foto/dorf.png",
+    "building.flakstellung": "graphics/buildings/foto/flakstellung.png",
+    "building.forschungszentrum": "graphics/buildings/foto/forschungszentrum.png",
+    "building.flugfeld": "graphics/buildings/foto/flugfeld.png",
+    "building.werft": "graphics/buildings/foto/werft.png",
+    "unit.kampfpanzer": "graphics/units/panzer4.png",
+    "unit.kampfpanzer.turm": "graphics/units/panzer4_turm.png",
+    "unit.spaehpanzer": "graphics/units/foto/spaehpanzer.png",
+    "unit.spaehpanzer.turm": "graphics/units/foto/spaehpanzer_turm.png",
+    "unit.artillerie": "graphics/units/foto/artillerie.png",
+    "unit.artillerie.turm": "graphics/units/foto/artillerie_turm.png",
+    "unit.schwerer_panzer": "graphics/units/foto/schwerer_panzer.png",
+    "unit.schwerer_panzer.turm": "graphics/units/foto/schwerer_panzer_turm.png",
+    "unit.schuetze": "graphics/units/foto/schuetze.png",
+    "unit.raketentrupp": "graphics/units/foto/raketentrupp.png",
+    "unit.miliz": "graphics/units/foto/miliz.png",
+    "unit.kampfhubschrauber": "graphics/units/foto/kampfhubschrauber.png",
+    "unit.kampfjet": "graphics/units/foto/kampfjet.png",
+    "unit.patrouillenboot": "graphics/units/foto/patrouillenboot.png",
+    "unit.zerstoerer": "graphics/units/foto/zerstoerer.png",
+    "unit.raketenkreuzer": "graphics/units/foto/raketenkreuzer.png",
+    "icon.geld": "graphics/icons/geld.svg",
+    "icon.kohle": "graphics/icons/kohle.svg",
+    "icon.eisen": "graphics/icons/eisen.svg",
+    "icon.gold": "graphics/icons/gold.svg",
+    "icon.strom": "graphics/icons/strom.svg",
+    "icon.einwohner": "graphics/icons/einwohner.svg",
+    "icon.zufriedenheit": "graphics/icons/zufriedenheit.svg",
+    "icon.bauhof": "graphics/icons/bauhof.svg",
+    "icon.angriff": "graphics/icons/angriff.svg",
+    "effect.explosion": "graphics/effects/explosion.svg",
+    "terrain.erde": "graphics/terrain/foto/erde.png",
+    "terrain.acker": "graphics/terrain/foto/acker.png",
+    "terrain.saat": "graphics/terrain/foto/saat.png",
+    "terrain.weizen": "graphics/terrain/foto/weizen.png",
+    "object.baum1_schatten": "graphics/terrain/foto/baum1_schatten.png",
+    "object.baum3_schatten": "graphics/terrain/foto/baum3_schatten.png",
+    "object.baum2_schatten": "graphics/terrain/foto/baum2_schatten.png",
+    "object.baum4_schatten": "graphics/terrain/foto/baum4_schatten.png",
+    "plot.haus0.py": "graphics/village/foto/haus0.py.png",
+    "plot.haus0.px": "graphics/village/foto/haus0.px.png",
+    "plot.haus0.ny": "graphics/village/foto/haus0.ny.png",
+    "plot.haus0.nx": "graphics/village/foto/haus0.nx.png",
+    "plot.hof0.py": "graphics/village/foto/hof0.py.png",
+    "plot.hof0.px": "graphics/village/foto/hof0.px.png",
+    "plot.hof0.ny": "graphics/village/foto/hof0.ny.png",
+    "plot.hof0.nx": "graphics/village/foto/hof0.nx.png",
+    "plot.haus1.py": "graphics/village/foto/haus1.py.png",
+    "plot.haus1.px": "graphics/village/foto/haus1.px.png",
+    "plot.haus1.ny": "graphics/village/foto/haus1.ny.png",
+    "plot.haus1.nx": "graphics/village/foto/haus1.nx.png",
+    "plot.haus2.py": "graphics/village/foto/haus2.py.png",
+    "plot.haus2.px": "graphics/village/foto/haus2.px.png",
+    "plot.haus2.ny": "graphics/village/foto/haus2.ny.png",
+    "plot.haus2.nx": "graphics/village/foto/haus2.nx.png",
+    "plot.hof1.py": "graphics/village/foto/hof1.py.png",
+    "plot.hof1.px": "graphics/village/foto/hof1.px.png",
+    "plot.hof1.ny": "graphics/village/foto/hof1.ny.png",
+    "plot.hof1.nx": "graphics/village/foto/hof1.nx.png",
+    "plot.scheune0.py": "graphics/village/foto/scheune0.py.png",
+    "plot.scheune0.px": "graphics/village/foto/scheune0.px.png",
+    "plot.scheune0.ny": "graphics/village/foto/scheune0.ny.png",
+    "plot.scheune0.nx": "graphics/village/foto/scheune0.nx.png",
+    "plot.gasthaus0.py": "graphics/village/foto/gasthaus0.py.png",
+    "plot.gasthaus0.px": "graphics/village/foto/gasthaus0.px.png",
+    "plot.gasthaus0.ny": "graphics/village/foto/gasthaus0.ny.png",
+    "plot.gasthaus0.nx": "graphics/village/foto/gasthaus0.nx.png",
+    "plot.kirche0.py": "graphics/village/foto/kirche0.py.png",
+    "plot.kirche0.px": "graphics/village/foto/kirche0.px.png",
+    "plot.kirche0.ny": "graphics/village/foto/kirche0.ny.png",
+    "plot.kirche0.nx": "graphics/village/foto/kirche0.nx.png",
+    "terrain.pflaster": "graphics/terrain/foto/pflaster.png",
+    "plot.haus3.py": "graphics/village/foto/haus3.py.png",
+    "plot.haus3.px": "graphics/village/foto/haus3.px.png",
+    "plot.haus3.ny": "graphics/village/foto/haus3.ny.png",
+    "plot.haus3.nx": "graphics/village/foto/haus3.nx.png",
+    "plot.haus4.py": "graphics/village/foto/haus4.py.png",
+    "plot.haus4.px": "graphics/village/foto/haus4.px.png",
+    "plot.haus4.ny": "graphics/village/foto/haus4.ny.png",
+    "plot.haus4.nx": "graphics/village/foto/haus4.nx.png",
+    "plot.haus5.py": "graphics/village/foto/haus5.py.png",
+    "plot.haus5.px": "graphics/village/foto/haus5.px.png",
+    "plot.haus5.ny": "graphics/village/foto/haus5.ny.png",
+    "plot.haus5.nx": "graphics/village/foto/haus5.nx.png",
+    "plot.hof2.py": "graphics/village/foto/hof2.py.png",
+    "plot.hof2.px": "graphics/village/foto/hof2.px.png",
+    "plot.hof2.ny": "graphics/village/foto/hof2.ny.png",
+    "plot.hof2.nx": "graphics/village/foto/hof2.nx.png",
+    "plot.scheune1.py": "graphics/village/foto/scheune1.py.png",
+    "plot.scheune1.px": "graphics/village/foto/scheune1.px.png",
+    "plot.scheune1.ny": "graphics/village/foto/scheune1.ny.png",
+    "plot.scheune1.nx": "graphics/village/foto/scheune1.nx.png",
+    "plot.garten0.py": "graphics/village/foto/garten0.py.png",
+    "plot.garten0.px": "graphics/village/foto/garten0.px.png",
+    "plot.garten0.ny": "graphics/village/foto/garten0.ny.png",
+    "plot.garten0.nx": "graphics/village/foto/garten0.nx.png",
+    "plot.garten1.py": "graphics/village/foto/garten1.py.png",
+    "plot.garten1.px": "graphics/village/foto/garten1.px.png",
+    "plot.garten1.ny": "graphics/village/foto/garten1.ny.png",
+    "plot.garten1.nx": "graphics/village/foto/garten1.nx.png",
+    "plot.gemeinde0.py": "graphics/village/foto/gemeinde0.py.png",
+    "plot.gemeinde0.px": "graphics/village/foto/gemeinde0.px.png",
+    "plot.gemeinde0.ny": "graphics/village/foto/gemeinde0.ny.png",
+    "plot.gemeinde0.nx": "graphics/village/foto/gemeinde0.nx.png",
+    "building.bauhof.anim0": "graphics/buildings/foto/bauhof.anim0.png",
+    "building.kohlebergwerk.anim0": "graphics/buildings/foto/kohlebergwerk.anim0.png",
+    "building.eisenbergwerk.anim0": "graphics/buildings/foto/eisenbergwerk.anim0.png",
+    "building.goldmine.anim0": "graphics/buildings/foto/goldmine.anim0.png",
+    "building.panzerfabrik.anim0": "graphics/buildings/foto/panzerfabrik.anim0.png",
+    "building.forschungszentrum.anim0": "graphics/buildings/foto/forschungszentrum.anim0.png",
+    "building.flugfeld.anim0": "graphics/buildings/foto/flugfeld.anim0.png",
+    "building.werft.anim0": "graphics/buildings/foto/werft.anim0.png",
+    "plot.muehle0.py.anim0": "graphics/village/foto/muehle0.py.anim0.png",
+    "plot.muehle0.py": "graphics/village/foto/muehle0.py.png",
+    "plot.muehle0.px.anim0": "graphics/village/foto/muehle0.px.anim0.png",
+    "plot.muehle0.px": "graphics/village/foto/muehle0.px.png",
+    "plot.muehle0.ny.anim0": "graphics/village/foto/muehle0.ny.anim0.png",
+    "plot.muehle0.ny": "graphics/village/foto/muehle0.ny.png",
+    "plot.muehle0.nx.anim0": "graphics/village/foto/muehle0.nx.anim0.png",
+    "plot.muehle0.nx": "graphics/village/foto/muehle0.nx.png",
+    "plot.muehle1.py.anim0": "graphics/village/foto/muehle1.py.anim0.png",
+    "plot.muehle1.py": "graphics/village/foto/muehle1.py.png",
+    "plot.muehle1.px.anim0": "graphics/village/foto/muehle1.px.anim0.png",
+    "plot.muehle1.px": "graphics/village/foto/muehle1.px.png",
+    "plot.muehle1.ny.anim0": "graphics/village/foto/muehle1.ny.anim0.png",
+    "plot.muehle1.ny": "graphics/village/foto/muehle1.ny.png",
+    "plot.muehle1.nx.anim0": "graphics/village/foto/muehle1.nx.anim0.png",
+    "plot.muehle1.nx": "graphics/village/foto/muehle1.nx.png",
+    "life.bauer": "graphics/life/bauer.png",
+    "life.baeuerin": "graphics/life/baeuerin.png",
+    "life.kuh": "graphics/life/kuh.png",
+    "menu.hero": "graphics/menu/hero.jpg",
+    "life.pferd": "graphics/life/pferd.png",
+    "building.stacheldraht": "graphics/buildings/foto/stacheldraht.png",
+    "building.panzersperre": "graphics/buildings/foto/panzersperre.png",
+    "building.schuetzengraben": "graphics/buildings/foto/schuetzengraben.png",
+    "building.bunker": "graphics/buildings/foto/bunker.png",
+    "decor.erdfleck": "graphics/terrain/erdfleck.svg",
+    "decor.strauch": "graphics/terrain/strauch.svg",
+    "decor.grasbueschel": "graphics/terrain/grasbueschel.svg",
+    "object.baum5_schatten": "graphics/terrain/foto/baum5_schatten.png",
+    "object.baum5": "graphics/terrain/foto/baum5.png",
+    "object.baum6_schatten": "graphics/terrain/foto/baum6_schatten.png",
+    "object.baum6": "graphics/terrain/foto/baum6.png",
+    "object.baum7_schatten": "graphics/terrain/foto/baum7_schatten.png",
+    "object.baum7": "graphics/terrain/foto/baum7.png",
+    "object.baum8_schatten": "graphics/terrain/foto/baum8_schatten.png",
+    "object.baum8": "graphics/terrain/foto/baum8.png"
+  },
+  "sprites": {
+    "object.baum1": {
+      "anchor": [
+        19.0,
+        94.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.baum2": {
+      "anchor": [
+        33.0,
+        85.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.baum3": {
+      "anchor": [
+        14.0,
+        108.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.baum4": {
+      "anchor": [
+        18.0,
+        82.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.fels": {
+      "anchor": [
+        21.0,
+        15.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.fels2": {
+      "anchor": [
+        23.0,
+        20.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "decor.gras": {
+      "anchor": [
+        12,
+        20
+      ]
+    },
+    "decor.trockengras": {
+      "anchor": [
+        12,
+        20
+      ]
+    },
+    "decor.blumen": {
+      "anchor": [
+        12,
+        20
+      ]
+    },
+    "decor.steine": {
+      "anchor": [
+        12,
+        14
+      ]
+    },
+    "decor.busch": {
+      "anchor": [
+        18,
+        25
+      ]
+    },
+    "decor.farn": {
+      "anchor": [
+        14,
+        19
+      ]
+    },
+    "building.bauhof": {
+      "anchor": [
+        101,
+        155
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        0,
+        -62.7
+      ]
+    },
+    "building.kraftwerk": {
+      "anchor": [
+        60.0,
+        234.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        -56,
+        -79.6
+      ],
+      "smoke": [
+        [
+          0.375,
+          0.321,
+          4.067
+        ]
+      ]
+    },
+    "building.kohlebergwerk": {
+      "anchor": [
+        60.0,
+        121.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        -57.1,
+        -76.1
+      ]
+    },
+    "building.eisenbergwerk": {
+      "anchor": [
+        60.0,
+        121.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        -57.1,
+        -76.1
+      ]
+    },
+    "building.goldmine": {
+      "anchor": [
+        60.0,
+        121.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        -57.1,
+        -76.1
+      ]
+    },
+    "building.kaserne": {
+      "anchor": [
+        63.0,
+        121.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        0,
+        -58
+      ]
+    },
+    "building.panzerfabrik": {
+      "anchor": [
+        91.0,
+        157.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        61.7,
+        -95.9
+      ],
+      "smoke": [
+        [
+          2.714,
+          1.286,
+          3.302
+        ]
+      ]
+    },
+    "building.verwaltung": {
+      "anchor": [
+        69.0,
+        152.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        -11.4,
+        -91.4
+      ]
+    },
+    "building.geschuetzturm": {
+      "frames": 8,
+      "anchor": [
+        29.0,
+        48.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "village.dorf": {
+      "anchor": [
+        236,
+        261
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0,
+      "smoke": [
+        [
+          0.665,
+          2.105,
+          2.124
+        ],
+        [
+          2.15,
+          2.609,
+          1.544
+        ],
+        [
+          2.798,
+          0.971,
+          1.606
+        ]
+      ]
+    },
+    "building.flakstellung": {
+      "frames": 8,
+      "anchor": [
+        19.0,
+        44.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.forschungszentrum": {
+      "anchor": [
+        60.0,
+        119.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        51.4,
+        -75.6
+      ]
+    },
+    "building.flugfeld": {
+      "anchor": [
+        99.0,
+        112.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        54.9,
+        -91.2
+      ]
+    },
+    "building.werft": {
+      "anchor": [
+        96.0,
+        152.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "flag": [
+        37.7,
+        -85
+      ]
+    },
+    "unit.kampfpanzer": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        28.0,
+        58.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "shade": 0.25,
+      "warm": 0.6
+    },
+    "unit.kampfpanzer.turm": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        29.0,
+        30.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "shade": 0.25,
+      "warm": 0.6
+    },
+    "unit.spaehpanzer": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        30.0,
+        54.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "shade": 0.25,
+      "warm": 0.6
+    },
+    "unit.spaehpanzer.turm": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        18.0,
+        25.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "shade": 0.25,
+      "warm": 0.6
+    },
+    "unit.artillerie": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        22.0,
+        54.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "shade": 0.25,
+      "warm": 0.6
+    },
+    "unit.artillerie.turm": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        19.0,
+        28.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "shade": 0.25,
+      "warm": 0.6
+    },
+    "unit.schwerer_panzer": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        30.0,
+        29.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "shade": 0.25,
+      "warm": 0.6
+    },
+    "unit.schwerer_panzer.turm": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        26.0,
+        39.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "shade": 0.25,
+      "warm": 0.6
+    },
+    "unit.schuetze": {
+      "frames": 8,
+      "rows": 3,
+      "anchor": [
+        13.0,
+        27.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05
+    },
+    "unit.raketentrupp": {
+      "frames": 8,
+      "rows": 3,
+      "anchor": [
+        20.0,
+        34.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05
+    },
+    "unit.miliz": {
+      "frames": 8,
+      "rows": 3,
+      "anchor": [
+        13.0,
+        27.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05
+    },
+    "unit.kampfhubschrauber": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        58.0,
+        41.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "prop": [
+        0.85,
+        13
+      ]
+    },
+    "unit.kampfjet": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        42.0,
+        36.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05,
+      "prop": [
+        0.8,
+        9
+      ]
+    },
+    "unit.patrouillenboot": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        57.0,
+        36.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05
+    },
+    "unit.zerstoerer": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        90.0,
+        58.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05
+    },
+    "unit.raketenkreuzer": {
+      "frames": 16,
+      "rows": 1,
+      "anchor": [
+        114.0,
+        75.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.05
+    },
+    "terrain.gras": {
+      "tiles": 4,
+      "photo": true
+    },
+    "terrain.waldboden": {
+      "tiles": 4,
+      "photo": true
+    },
+    "terrain.sand": {
+      "tiles": 4,
+      "photo": true
+    },
+    "terrain.felsboden": {
+      "tiles": 4,
+      "photo": true
+    },
+    "terrain.wasser": {
+      "tiles": 4,
+      "photo": true
+    },
+    "terrain.erde": {
+      "tiles": 4,
+      "photo": true
+    },
+    "terrain.acker": {
+      "tiles": 4,
+      "photo": true
+    },
+    "terrain.saat": {
+      "tiles": 4,
+      "photo": true
+    },
+    "terrain.weizen": {
+      "tiles": 4,
+      "photo": true
+    },
+    "deposit.kohle": {
+      "anchor": [
+        32,
+        32
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "deposit.eisen": {
+      "anchor": [
+        32,
+        32
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "deposit.gold": {
+      "anchor": [
+        32,
+        32
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.baum1_schatten": {
+      "anchor": [
+        16,
+        118
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.baum3_schatten": {
+      "anchor": [
+        11,
+        118
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.baum2_schatten": {
+      "anchor": [
+        3.0,
+        118.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "object.baum4_schatten": {
+      "anchor": [
+        2.0,
+        118.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.haus0.py": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.211,
+          1.197,
+          2.35
+        ]
+      ]
+    },
+    "plot.haus0.px": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.197,
+          0.789,
+          2.35
+        ]
+      ]
+    },
+    "plot.haus0.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.789,
+          0.803,
+          2.35
+        ]
+      ]
+    },
+    "plot.haus0.nx": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.803,
+          1.211,
+          2.35
+        ]
+      ]
+    },
+    "plot.hof0.py": {
+      "anchor": [
+        94,
+        175
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.698,
+          1.069,
+          2.381
+        ]
+      ]
+    },
+    "plot.hof0.px": {
+      "anchor": [
+        63,
+        175
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.069,
+          2.302,
+          2.381
+        ]
+      ]
+    },
+    "plot.hof0.ny": {
+      "anchor": [
+        95.0,
+        175.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          2.302,
+          0.931,
+          2.381
+        ]
+      ]
+    },
+    "plot.hof0.nx": {
+      "anchor": [
+        63.0,
+        175.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.931,
+          0.698,
+          2.381
+        ]
+      ]
+    },
+    "plot.haus1.py": {
+      "anchor": [
+        64.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.172,
+          1.069,
+          1.631
+        ]
+      ]
+    },
+    "plot.haus1.px": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.069,
+          0.828,
+          1.631
+        ]
+      ]
+    },
+    "plot.haus1.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.828,
+          0.931,
+          1.631
+        ]
+      ]
+    },
+    "plot.haus1.nx": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.931,
+          1.172,
+          1.631
+        ]
+      ]
+    },
+    "plot.haus2.py": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.145,
+          1.187,
+          1.633
+        ]
+      ]
+    },
+    "plot.haus2.px": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.187,
+          0.855,
+          1.633
+        ]
+      ]
+    },
+    "plot.haus2.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.855,
+          0.813,
+          1.633
+        ]
+      ]
+    },
+    "plot.haus2.nx": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.813,
+          1.145,
+          1.633
+        ]
+      ]
+    },
+    "plot.hof1.py": {
+      "anchor": [
+        96.0,
+        175.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.832,
+          0.83,
+          1.766
+        ]
+      ]
+    },
+    "plot.hof1.px": {
+      "anchor": [
+        63,
+        175
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.83,
+          2.168,
+          1.766
+        ]
+      ]
+    },
+    "plot.hof1.ny": {
+      "anchor": [
+        95.0,
+        175.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          2.168,
+          1.17,
+          1.766
+        ]
+      ]
+    },
+    "plot.hof1.nx": {
+      "anchor": [
+        63.0,
+        175.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.17,
+          0.832,
+          1.766
+        ]
+      ]
+    },
+    "plot.scheune0.py": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.scheune0.px": {
+      "anchor": [
+        60.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.scheune0.ny": {
+      "anchor": [
+        60.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.scheune0.nx": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.gasthaus0.py": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.848,
+          1.209,
+          2.5
+        ]
+      ]
+    },
+    "plot.gasthaus0.px": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.209,
+          1.152,
+          2.5
+        ]
+      ]
+    },
+    "plot.gasthaus0.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.152,
+          0.791,
+          2.5
+        ]
+      ]
+    },
+    "plot.gasthaus0.nx": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.791,
+          0.848,
+          2.5
+        ]
+      ]
+    },
+    "plot.kirche0.py": {
+      "anchor": [
+        95.0,
+        271.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.kirche0.px": {
+      "anchor": [
+        95.0,
+        271.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.kirche0.ny": {
+      "anchor": [
+        95.0,
+        271.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.kirche0.nx": {
+      "anchor": [
+        94,
+        271
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "terrain.pflaster": {
+      "tiles": 4,
+      "photo": true
+    },
+    "plot.haus3.py": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.982,
+          1.315,
+          2.459
+        ]
+      ]
+    },
+    "plot.haus3.px": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.315,
+          1.018,
+          2.459
+        ]
+      ]
+    },
+    "plot.haus3.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.018,
+          0.685,
+          2.459
+        ]
+      ]
+    },
+    "plot.haus3.nx": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.685,
+          0.982,
+          2.459
+        ]
+      ]
+    },
+    "plot.haus4.py": {
+      "anchor": [
+        62,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.803,
+          1.208,
+          1.74
+        ]
+      ]
+    },
+    "plot.haus4.px": {
+      "anchor": [
+        63,
+        159
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.208,
+          1.197,
+          1.74
+        ]
+      ]
+    },
+    "plot.haus4.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.197,
+          0.792,
+          1.74
+        ]
+      ]
+    },
+    "plot.haus4.nx": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.792,
+          0.803,
+          1.74
+        ]
+      ]
+    },
+    "plot.haus5.py": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.593,
+          0.89,
+          2.186
+        ]
+      ]
+    },
+    "plot.haus5.px": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.89,
+          1.407,
+          2.186
+        ]
+      ]
+    },
+    "plot.haus5.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.407,
+          1.11,
+          2.186
+        ]
+      ]
+    },
+    "plot.haus5.nx": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.11,
+          0.593,
+          2.186
+        ]
+      ]
+    },
+    "plot.hof2.py": {
+      "anchor": [
+        93.0,
+        175.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.482,
+          1.528,
+          2.235
+        ]
+      ]
+    },
+    "plot.hof2.px": {
+      "anchor": [
+        65.0,
+        175.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.528,
+          2.518,
+          2.235
+        ]
+      ]
+    },
+    "plot.hof2.ny": {
+      "anchor": [
+        95.0,
+        175.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          2.518,
+          0.472,
+          2.235
+        ]
+      ]
+    },
+    "plot.hof2.nx": {
+      "anchor": [
+        61,
+        175
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.472,
+          0.482,
+          2.235
+        ]
+      ]
+    },
+    "plot.scheune1.py": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.scheune1.px": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.scheune1.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.scheune1.nx": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.garten0.py": {
+      "anchor": [
+        62.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.garten0.px": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.garten0.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.garten0.nx": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.garten1.py": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.garten1.px": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.garten1.ny": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.garten1.nx": {
+      "anchor": [
+        63.0,
+        159.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": []
+    },
+    "plot.gemeinde0.py": {
+      "anchor": [
+        92.0,
+        146.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.773,
+          0.729,
+          2.436
+        ]
+      ],
+      "flag": [
+        -49.1,
+        -95.3
+      ]
+    },
+    "plot.gemeinde0.px": {
+      "anchor": [
+        95.0,
+        156.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.729,
+          1.227,
+          2.436
+        ]
+      ],
+      "flag": [
+        28.6,
+        -85
+      ]
+    },
+    "plot.gemeinde0.ny": {
+      "anchor": [
+        95.0,
+        132.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.227,
+          2.271,
+          2.436
+        ]
+      ],
+      "flag": [
+        49.1,
+        -123.9
+      ]
+    },
+    "plot.gemeinde0.nx": {
+      "anchor": [
+        92.0,
+        136.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          2.271,
+          1.773,
+          2.436
+        ]
+      ],
+      "flag": [
+        -28.6,
+        -134.2
+      ]
+    },
+    "building.bauhof.anim0": {
+      "frames": 24,
+      "fps": 3,
+      "anchor": [
+        74.0,
+        134.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.kohlebergwerk.anim0": {
+      "frames": 8,
+      "fps": 8,
+      "anchor": [
+        5.0,
+        139.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.eisenbergwerk.anim0": {
+      "frames": 8,
+      "fps": 8,
+      "anchor": [
+        5.0,
+        139.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.goldmine.anim0": {
+      "frames": 8,
+      "fps": 8,
+      "anchor": [
+        5.0,
+        139.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.panzerfabrik.anim0": {
+      "frames": 24,
+      "fps": 3,
+      "anchor": [
+        86.0,
+        109.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.forschungszentrum.anim0": {
+      "frames": 24,
+      "fps": 4,
+      "anchor": [
+        60.0,
+        73.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.flugfeld.anim0": {
+      "frames": 8,
+      "fps": 5,
+      "anchor": [
+        5.0,
+        46.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.werft.anim0": {
+      "frames": 24,
+      "fps": 3,
+      "anchor": [
+        44.0,
+        162.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle0.py.anim0": {
+      "frames": 12,
+      "fps": 8,
+      "anchor": [
+        16.0,
+        68.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle0.py": {
+      "anchor": [
+        95.0,
+        125.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.468,
+          1.091,
+          2.29
+        ]
+      ]
+    },
+    "plot.muehle0.px.anim0": {
+      "frames": 12,
+      "fps": 8,
+      "anchor": [
+        -38.0,
+        89.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle0.px": {
+      "anchor": [
+        62.0,
+        113.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.091,
+          1.532,
+          2.29
+        ]
+      ]
+    },
+    "plot.muehle0.ny.anim0": {
+      "frames": 12,
+      "fps": 8,
+      "anchor": [
+        59.0,
+        76.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle0.ny": {
+      "anchor": [
+        93.0,
+        117.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.532,
+          0.909,
+          2.29
+        ]
+      ]
+    },
+    "plot.muehle0.nx.anim0": {
+      "frames": 12,
+      "fps": 8,
+      "anchor": [
+        25.0,
+        71.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle0.nx": {
+      "anchor": [
+        63.0,
+        130.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.909,
+          1.468,
+          2.29
+        ]
+      ]
+    },
+    "plot.muehle1.py.anim0": {
+      "frames": 16,
+      "fps": 6,
+      "anchor": [
+        30.0,
+        131.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle1.py": {
+      "anchor": [
+        95.0,
+        114.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.55,
+          1.415,
+          1.503
+        ]
+      ]
+    },
+    "plot.muehle1.px.anim0": {
+      "frames": 16,
+      "fps": 6,
+      "anchor": [
+        13.0,
+        153.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle1.px": {
+      "anchor": [
+        61.0,
+        120.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          1.415,
+          2.45,
+          1.503
+        ]
+      ]
+    },
+    "plot.muehle1.ny.anim0": {
+      "frames": 16,
+      "fps": 6,
+      "anchor": [
+        85.0,
+        150.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle1.ny": {
+      "anchor": [
+        93.0,
+        116.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          2.45,
+          0.585,
+          1.503
+        ]
+      ]
+    },
+    "plot.muehle1.nx.anim0": {
+      "frames": 16,
+      "fps": 6,
+      "anchor": [
+        42.0,
+        128.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "plot.muehle1.nx": {
+      "anchor": [
+        62.0,
+        112.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0,
+      "smoke": [
+        [
+          0.585,
+          0.55,
+          1.503
+        ]
+      ]
+    },
+    "life.bauer": {
+      "frames": 8,
+      "rows": 3,
+      "anchor": [
+        7.0,
+        17.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "life.baeuerin": {
+      "frames": 8,
+      "rows": 3,
+      "anchor": [
+        5.0,
+        13.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "life.kuh": {
+      "frames": 8,
+      "rows": 3,
+      "anchor": [
+        18.0,
+        21.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "life.pferd": {
+      "frames": 8,
+      "rows": 3,
+      "anchor": [
+        19.0,
+        30.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0
+    },
+    "building.stacheldraht": {
+      "anchor": [
+        15.0,
+        49.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.18
+    },
+    "building.panzersperre": {
+      "anchor": [
+        13.0,
+        48.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.18
+    },
+    "building.schuetzengraben": {
+      "anchor": [
+        20.0,
+        40.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.18
+    },
+    "building.bunker": {
+      "anchor": [
+        64.0,
+        89.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.18
+    },
+    "decor.erdfleck": {
+      "anchor": [
+        32,
+        16
+      ]
+    },
+    "decor.strauch": {
+      "anchor": [
+        30,
+        40
+      ]
+    },
+    "decor.grasbueschel": {
+      "anchor": [
+        16,
+        24
+      ]
+    },
+    "object.baum5_schatten": {
+      "anchor": [
+        7.0,
+        118.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "object.baum5": {
+      "anchor": [
+        11.0,
+        118.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "object.baum6_schatten": {
+      "anchor": [
+        22.0,
+        118.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "object.baum6": {
+      "anchor": [
+        23.0,
+        72.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "object.baum7_schatten": {
+      "anchor": [
+        3.0,
+        118.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "object.baum7": {
+      "anchor": [
+        29.0,
+        83.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "object.baum8_schatten": {
+      "anchor": [
+        2.0,
+        118.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    },
+    "object.baum8": {
+      "anchor": [
+        22.0,
+        62.0
+      ],
+      "scale": 0.5,
+      "photo": true,
+      "tint": 0.0
+    }
+  },
+  "audio": {
+    "sfx.gewehr": "audio/gewehr.wav",
+    "sfx.mg": "audio/mg.wav",
+    "sfx.kanone": "audio/kanone.wav",
+    "sfx.rakete": "audio/rakete.wav",
+    "sfx.artillerie": "audio/artillerie.wav",
+    "sfx.flak": "audio/flak.wav",
+    "sfx.knacken": "audio/knacken.wav",
+    "sfx.schutt": "audio/schutt.wav",
+    "sfx.explosion": "audio/explosion.wav",
+    "sfx.bauen": "audio/bauen.wav",
+    "ui.einheit": "audio/einheit_bereit.wav",
+    "ui.klick": "audio/klick.wav",
+    "ui.bestaetigung": "audio/funk_bestaetigung.wav",
+    "ui.alarm": "audio/alarm.wav",
+    "ui.erfolg": "audio/erfolg.wav",
+    "ui.warnung": "audio/warnung.wav",
+    "ui.forschung": "audio/forschung.wav",
+    "sfx.gewehr.v2": "audio/gewehr_2.wav",
+    "sfx.gewehr.v3": "audio/gewehr_3.wav",
+    "sfx.mg.v2": "audio/mg_2.wav",
+    "sfx.mg.v3": "audio/mg_3.wav",
+    "sfx.pak": "audio/pak.wav",
+    "sfx.pak.v2": "audio/pak_2.wav",
+    "sfx.kanone.v2": "audio/kanone_2.wav",
+    "sfx.artillerie.v2": "audio/artillerie_2.wav",
+    "sfx.granate": "audio/granate.wav",
+    "sfx.granate.v2": "audio/granate_2.wav",
+    "sfx.schiff": "audio/schiff.wav",
+    "sfx.schiff.v2": "audio/schiff_2.wav",
+    "sfx.flak.v2": "audio/flak_2.wav",
+    "sfx.stuka": "audio/stuka.wav",
+    "sfx.explosion.v2": "audio/explosion_2.wav",
+    "sfx.explosion.v3": "audio/explosion_3.wav",
+    "sfx.knacken.v2": "audio/knacken_2.wav",
+    "sfx.knacken.v3": "audio/knacken_3.wav",
+    "sfx.schutt.v2": "audio/schutt_2.wav",
+    "sfx.bauen.v2": "audio/bauen_2.wav",
+    "ui.bestaetigung.v2": "audio/funk_bestaetigung_2.wav",
+    "amb.vogel": "audio/vogel_amsel.wav",
+    "amb.vogel.v2": "audio/vogel_amsel_2.wav",
+    "amb.vogel.meise": "audio/vogel_meise.wav",
+    "amb.vogel.meise.v2": "audio/vogel_meise_2.wav",
+    "amb.vogel.fink": "audio/vogel_fink.wav",
+    "amb.vogel.fink.v2": "audio/vogel_fink_2.wav",
+    "amb.kraehe": "audio/vogel_kraehe.wav",
+    "amb.kraehe.v2": "audio/vogel_kraehe_2.wav",
+    "amb.kuckuck": "audio/vogel_kuckuck.wav",
+    "amb.kuh": "audio/kuh_muh.wav",
+    "amb.kuh.v2": "audio/kuh_muh_2.wav",
+    "amb.kuh.v3": "audio/kuh_muh_3.wav",
+    "amb.pferd": "audio/pferd_wiehern.wav",
+    "amb.pferd.v2": "audio/pferd_wiehern_2.wav",
+    "amb.schnauben": "audio/pferd_schnauben.wav",
+    "amb.schnauben.v2": "audio/pferd_schnauben_2.wav",
+    "amb.hahn": "audio/hahn.wav",
+    "amb.hahn.v2": "audio/hahn_2.wav",
+    "amb.hund": "audio/hund.wav",
+    "amb.hund.v2": "audio/hund_2.wav",
+    "amb.glocke": "audio/glocke.wav",
+    "amb.muehle": "audio/muehle_schleife.wav",
+    "amb.panzer": "audio/panzer_schleife.wav",
+    "amb.flug": "audio/flug_schleife.wav",
+    "amb.wald": "audio/amb_wald.wav",
+    "amb.wald.v2": "audio/amb_wald_v2.wav",
+    "amb.wald.v3": "audio/amb_wald_v3.wav",
+    "amb.kraehe.v3": "audio/amb_kraehe_v3.wav",
+    "amb.kraehe.v4": "audio/amb_kraehe_v4.wav",
+    "amb.fluss": "audio/amb_fluss.wav",
+    "amb.stromschnelle": "audio/amb_stromschnelle.wav",
+    "amb.stromschnelle.v2": "audio/amb_stromschnelle_v2.wav",
+    "amb.meer": "audio/amb_meer.wav",
+    "amb.meer.v2": "audio/amb_meer_v2.wav",
+    "amb.wald.ruhig": "audio/amb_wald_ruhig.wav",
+    "amb.wald.ruhig.v2": "audio/amb_wald_ruhig_v2.wav",
+    "amb.wald.tief": "audio/amb_wald_tief.wav",
+    "amb.wald.tag": "audio/amb_wald_tag.wav",
+    "amb.wald.tag.v2": "audio/amb_wald_tag_v2.wav",
+    "amb.wind.sanft": "audio/amb_wind_sanft.wav",
+    "amb.wind.stark": "audio/amb_wind_stark.wav",
+    "amb.wind.stark.v2": "audio/amb_wind_stark_v2.wav",
+    "amb.wind.stark.v3": "audio/amb_wind_stark_v3.wav",
+    "amb.windstoss": "audio/amb_windstoss.wav",
+    "amb.panzer.fahrt": "audio/amb_panzer_fahrt.wav",
+    "amb.panzer.start": "audio/amb_panzer_start.wav",
+    "amb.panzer.stopp": "audio/amb_panzer_stopp.wav",
+    "amb.lkw.start": "audio/amb_lkw_start.wav",
+    "amb.lkw.stopp": "audio/amb_lkw_stopp.wav",
+    "sfx.explosion.v4": "audio/explosion_mehrfach.wav",
+    "sfx.explosion.v5": "audio/explosion_mehrfach_v2.wav",
+    "sfx.artillerie.v3": "audio/artillerie_einschlag.wav",
+    "sfx.artillerie.v4": "audio/artillerie_einschlag_v2.wav",
+    "sfx.artillerie.v5": "audio/artillerie_einschlag_v3.wav",
+    "sfx.granate.v3": "audio/handgranate.wav",
+    "sfx.granate.v4": "audio/handgranate_v2.wav",
+    "sfx.granate.v5": "audio/handgranate_v3.wav",
+    "sfx.schutt.v3": "audio/schutt_truemmer.wav",
+    "sfx.mine": "audio/mine.wav",
+    "sfx.mine.v2": "audio/mine_v2.wav",
+    "sfx.blendung": "audio/blendgranate.wav",
+    "sfx.rauch": "audio/rauchgranate.wav",
+    "sfx.rauch.v2": "audio/rauchgranate_v2.wav",
+    "sfx.gewehr.v4": "audio/schuss_gewehr_1.wav",
+    "sfx.gewehr.v5": "audio/schuss_gewehr_2.wav",
+    "sfx.gewehr.v6": "audio/schuss_gewehr_3.wav",
+    "sfx.mg.v4": "audio/schuss_mg_1.wav",
+    "sfx.mg.v5": "audio/schuss_mg_2.wav",
+    "sfx.mg.v6": "audio/schuss_mg_3.wav",
+    "sfx.mg.v7": "audio/schuss_mg_4.wav",
+    "sfx.mg.v8": "audio/schuss_mg_5.wav",
+    "sfx.mg.v9": "audio/schuss_mg_6.wav",
+    "sfx.pak.v3": "audio/schuss_pak_1.wav",
+    "sfx.pak.v4": "audio/schuss_pak_2.wav",
+    "sfx.pak.v5": "audio/schuss_pak_3.wav",
+    "sfx.sturmgewehr": "audio/schuss_sturmgewehr_1.wav",
+    "sfx.sturmgewehr.v3": "audio/schuss_sturmgewehr_2.wav",
+    "sfx.sturmgewehr.v4": "audio/schuss_sturmgewehr_3.wav",
+    "sfx.sturmgewehr.v5": "audio/schuss_sturmgewehr_4.wav",
+    "sfx.smg": "audio/schuss_smg_1.wav",
+    "sfx.smg.v3": "audio/schuss_smg_2.wav",
+    "sfx.smg.v4": "audio/schuss_smg_3.wav",
+    "sfx.smg.v5": "audio/schuss_smg_4.wav",
+    "sfx.pistole": "audio/schuss_pistole_1.wav",
+    "sfx.pistole.v3": "audio/schuss_pistole_2.wav",
+    "sfx.pistole.v4": "audio/schuss_pistole_3.wav",
+    "sfx.pistole.v5": "audio/schuss_pistole_4.wav",
+    "sfx.flinte": "audio/schuss_flinte_1.wav",
+    "sfx.flinte.v3": "audio/schuss_flinte_2.wav",
+    "sfx.flinte.v4": "audio/schuss_flinte_3.wav",
+    "sfx.schalldaempfer": "audio/schuss_schalldaempfer_1.wav",
+    "sfx.schalldaempfer.v3": "audio/schuss_schalldaempfer_2.wav",
+    "sfx.schalldaempfer.v4": "audio/schuss_schalldaempfer_3.wav",
+    "sfx.schalldaempfer.v5": "audio/schuss_schalldaempfer_4.wav",
+    "amb.panzer.fahrt.b": "audio/panzer_fahrt_b.wav",
+    "amb.panzer.fahrt.c": "audio/panzer_fahrt_c.wav",
+    "amb.panzer.fahrt.d": "audio/panzer_fahrt_d.wav",
+    "amb.panzer.leerlauf": "audio/panzer_leerlauf.wav",
+    "amb.panzer.leerlauf.b": "audio/panzer_leerlauf_b.wav",
+    "amb.panzer.start.v2": "audio/panzer_start_v2.wav",
+    "amb.panzer.stopp.v2": "audio/panzer_stopp_v2.wav",
+    "amb.luke.auf": "audio/luke_auf.wav",
+    "amb.luke.auf.v2": "audio/luke_auf_v2.wav",
+    "amb.luke.auf.v3": "audio/luke_auf_v3.wav",
+    "amb.luke.zu": "audio/luke_zu.wav",
+    "amb.luke.zu.v2": "audio/luke_zu_v2.wav",
+    "amb.lkw.fahrt": "audio/lkw_fahrt.wav",
+    "amb.lkw.fahrt.b": "audio/lkw_fahrt_b.wav",
+    "amb.lkw.fahrt.c": "audio/lkw_fahrt_c.wav",
+    "amb.lkw.fahrt.d": "audio/lkw_fahrt_d.wav",
+    "amb.lkw.leerlauf": "audio/lkw_leerlauf.wav",
+    "amb.lkw.leerlauf.b": "audio/lkw_leerlauf_b.wav",
+    "amb.lkw.start.v2": "audio/lkw_start_v2.wav",
+    "amb.lkw.stopp.v2": "audio/lkw_stopp_v2.wav",
+    "funk.auftrag_erfuellt": "audio/funk_auftrag_erfuellt.wav",
+    "funk.auftrag_erfuellt.v2": "audio/funk_auftrag_erfuellt_2.wav",
+    "funk.auftrag_gescheitert": "audio/funk_auftrag_gescheitert.wav",
+    "funk.auftrag_gescheitert.v2": "audio/funk_auftrag_gescheitert_2.wav",
+    "funk.deckung": "audio/funk_deckung.wav",
+    "funk.deckung.v2": "audio/funk_deckung_2.wav",
+    "funk.feind": "audio/funk_feind.wav",
+    "funk.feind.v2": "audio/funk_feind_2.wav",
+    "funk.feuer": "audio/funk_feuer.wav",
+    "funk.feuer.v2": "audio/funk_feuer_2.wav",
+    "funk.halt": "audio/funk_halt.wav",
+    "funk.halt.v2": "audio/funk_halt_2.wav",
+    "funk.mehrere": "audio/funk_mehrere.wav",
+    "funk.mehrere.v2": "audio/funk_mehrere_2.wav",
+    "funk.munition": "audio/funk_munition.wav",
+    "funk.munition.v2": "audio/funk_munition_2.wav",
+    "funk.nachladen": "audio/funk_nachladen.wav",
+    "funk.nachladen.v2": "audio/funk_nachladen_2.wav",
+    "funk.panzer": "audio/funk_panzer.wav",
+    "funk.panzer.v2": "audio/funk_panzer_2.wav",
+    "funk.rueckzug": "audio/funk_rueckzug.wav",
+    "funk.rueckzug.v2": "audio/funk_rueckzug_2.wav",
+    "funk.sanitaeter": "audio/funk_sanitaeter.wav",
+    "funk.sanitaeter.v2": "audio/funk_sanitaeter_2.wav",
+    "funk.verstaerkung": "audio/funk_verstaerkung.wav",
+    "funk.verstaerkung.v2": "audio/funk_verstaerkung_2.wav",
+    "funk.verstanden": "audio/funk_verstanden.wav",
+    "funk.verstanden.v2": "audio/funk_verstanden_2.wav",
+    "funk.vorwaerts": "audio/funk_vorwaerts.wav",
+    "funk.vorwaerts.v2": "audio/funk_vorwaerts_2.wav",
+    "funk.wiederholen": "audio/funk_wiederholen.wav",
+    "funk.wiederholen.v2": "audio/funk_wiederholen_2.wav",
+    "funk.ziel_gesichert": "audio/funk_ziel_gesichert.wav",
+    "funk.ziel_gesichert.v2": "audio/funk_ziel_gesichert_2.wav",
+    "funk.ziel_verloren": "audio/funk_ziel_verloren.wav",
+    "funk.ziel_verloren.v2": "audio/funk_ziel_verloren_2.wav"
+  },
+  "music": [],
+  "_audioInfo": "audio: Geräusch-Schlüssel -> Datei (WAV, MP3 oder OGG). Varianten heißen \"<Schlüssel>.v2\", \".v3\" und werden zufällig gewählt. music: Liste eigener Musikstücke; leer = Musik wird im Browser erzeugt. Schleifen (amb.wald*) laufen als Waldhintergrund; Varianten wie amb.kraehe.v3 werden zufällig gewählt.",
+  "tracks": {
+    "menu": "audio/musik_menue.mp3",
+    "kampf": "audio/musik_kampf.mp3",
+    "sieg": "audio/musik_sieg.mp3",
+    "niederlage": "audio/musik_niederlage.mp3"
+  },
+  "_tracksInfo": "tracks: Musikstücke für Szenen. menu = Hauptmenü (Schleife), kampf = Gefecht (Schleife, sonst erzeugte Musik), sieg / niederlage = einmal am Spielende."
+}

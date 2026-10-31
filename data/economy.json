@@ -1,0 +1,49 @@
+{
+  "_info": "Wirtschafts- und Spielregeln. Einnahmen pro Einwohner und Minute.",
+  "start": { "geld": 6000, "kohle": 200, "eisen": 300, "gold": 20 },
+  "taxLevels": [
+    { "name": "Niedrig", "rate": 0.06, "happiness": 15 },
+    { "name": "Mittel",  "rate": 0.10, "happiness": 0 },
+    { "name": "Hoch",    "rate": 0.15, "happiness": -20 }
+  ],
+  "occupationRate": 0.14,
+  "protectionRate": 0.08,
+  "protectionRadius": 9,
+  "plunder": { "radius": 6, "geldPerPop": 0.5, "goldPerPop": 0.005, "popLoss": 0.4, "cooldown": 180 },
+  "happiness": { "base": 60, "occupied": -25, "garrison": 15, "protection": -10, "revoltBelow": 15, "revoltEndAbove": 35 },
+  "growthPerMin": 0.02,
+  "maxPopFactor": 1.4,
+  "villageUpgrades": {
+    "markt":     { "name": "Markt",      "cost": { "geld": 800 },              "desc": "+30 % Einnahmen",     "incomeBonus": 0.3 },
+    "wohnblock": { "name": "Wohnblock",  "cost": { "geld": 1000, "eisen": 50 }, "desc": "+50 % max. Einwohner", "maxPopBonus": 0.5 },
+    "klinik":    { "name": "Klinik",     "cost": { "geld": 700, "kohle": 20 },  "desc": "+15 Zufriedenheit",   "happiness": 15 }
+  },
+  "sellRefund": 0.5,
+  "buildRadius": 6,
+  "travelTime": { "land": 12, "see": 25 },
+  "ai": {
+    "firstAttackAt": 480,
+    "attackIntervalMin": 200,
+    "attackIntervalMax": 330,
+    "reinforceEvery": 75,
+    "incomeFactor": 0.8,
+    "warningTime": 40,
+    "maxGarrison": 16
+  },
+  "diplomacy": {
+    "_info": "Haltung -100..100 je KI-Macht. Waffenstillstand: Bereitschaft = Haltung + perProvinceDiff x (deine Provinzen - ihre) muss >= ceasefireNeeds sein. Bündnis: Haltung >= allianceNeeds und mindestens allianceAfter s Waffenstillstand.",
+    "ceasefireNeeds": 15,
+    "perProvinceDiff": 6,
+    "allianceNeeds": 35,
+    "allianceAfter": 180,
+    "giftAmount": 1000,
+    "giftHaltung": 12,
+    "attackPenalty": 0.15,
+    "conquestPenalty": 30,
+    "warDeclarationPenalty": 40,
+    "breakTrustPenalty": 10,
+    "cancelBelow": -25,
+    "allianceIncomeBonus": 0.1,
+    "aiResearchEvery": 300
+  }
+}

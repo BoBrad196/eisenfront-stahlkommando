@@ -1,0 +1,29 @@
+{
+  "_info": "Einheiten. speed in Kacheln/s, range in Kacheln, rof = Sekunden zwischen Schüssen, sight = Sichtweite in Kacheln, time = Bauzeit in s. armor: infanterie | leicht | schwer | luft. from: kaserne | panzerfabrik | flugfeld | werft. domain: see = Schiff (fährt nur auf Wasser). research = benötigte Forschung. turret = Geschützturm dreht unabhängig zum Ziel. Waffen mit luft = 0 können Flugzeuge nicht treffen. sprite = Schlüssel in assets/manifest.json",
+  "weapons": {
+    "gewehr":  { "infanterie": 1.0, "leicht": 0.35, "schwer": 0.15, "gebaeude": 0.2, "luft": 0 },
+    "mg":      { "infanterie": 1.3, "leicht": 0.6,  "schwer": 0.2,  "gebaeude": 0.25, "luft": 0.5 },
+    "panzerbuechse": { "infanterie": 0.3, "leicht": 1.2, "schwer": 0.85, "gebaeude": 0.4, "luft": 0.3 },
+    "kanone":  { "infanterie": 0.45, "leicht": 1.0, "schwer": 1.0,  "gebaeude": 0.8, "luft": 0 },
+    "granate": { "infanterie": 0.9, "leicht": 0.8,  "schwer": 0.6,  "gebaeude": 1.3, "luft": 0 },
+    "bombe":      { "infanterie": 0.9, "leicht": 1.1, "schwer": 1.1, "gebaeude": 1.4, "luft": 0 },
+    "luftkanone": { "infanterie": 0.6, "leicht": 0.8, "schwer": 0.35, "gebaeude": 0.3, "luft": 1.4 },
+    "flak":       { "infanterie": 0,   "leicht": 0,   "schwer": 0,    "gebaeude": 0,   "luft": 1.6 },
+    "schiffskanone": { "infanterie": 0.5, "leicht": 1.0, "schwer": 1.0, "gebaeude": 0.9, "luft": 0 },
+    "schiffsgeschuetz": { "infanterie": 0.8, "leicht": 1.0, "schwer": 1.0, "gebaeude": 1.3, "luft": 0 }
+  },
+  "units": {
+    "schuetze":        { "name": "Schütze",        "sight": 6, "armor": "infanterie", "hp": 60,   "speed": 1.5, "range": 4,   "damage": 9,  "rof": 1.0, "weapon": "gewehr",  "cost": { "geld": 100 },                                       "time": 5,  "from": "kaserne",      "sprite": "unit.schuetze" },
+    "raketentrupp":    { "name": "Panzerbüchsen-Trupp",   "sight": 6, "armor": "infanterie", "hp": 55,   "speed": 1.3, "range": 5,   "damage": 32, "rof": 2.2, "weapon": "panzerbuechse",  "cost": { "geld": 250, "eisen": 20, "kohle": 10 },             "time": 8,  "from": "kaserne",      "sprite": "unit.raketentrupp" },
+    "spaehpanzer":     { "name": "Panzerspähwagen", "turret": true,     "sight": 10, "armor": "leicht",     "hp": 200,  "speed": 3.2, "range": 4.5, "damage": 13, "rof": 0.5, "weapon": "mg",      "cost": { "geld": 400, "eisen": 60, "kohle": 20 },             "time": 10, "from": "panzerfabrik", "sprite": "unit.spaehpanzer" },
+    "kampfpanzer":     { "name": "Panzer IV", "turret": true,    "sight": 7, "armor": "schwer",     "hp": 480,  "speed": 2.0, "range": 5,   "damage": 45, "rof": 2.0, "weapon": "kanone",  "cost": { "geld": 800, "eisen": 150, "kohle": 60 },            "time": 15, "from": "panzerfabrik", "sprite": "unit.kampfpanzer" },
+    "artillerie":      { "name": "Sturmpanzer I", "turret": true,     "sight": 8, "armor": "leicht",     "hp": 160,  "speed": 1.5, "range": 10,  "damage": 60, "rof": 4.0, "weapon": "granate", "splash": 1.5, "minRange": 3, "cost": { "geld": 1000, "eisen": 120, "kohle": 80, "gold": 10 }, "time": 20, "from": "panzerfabrik", "sprite": "unit.artillerie" },
+    "schwerer_panzer": { "name": "Neubaufahrzeug", "turret": true,   "sight": 7, "armor": "schwer",     "hp": 1100, "speed": 1.3, "range": 5.5, "damage": 75, "rof": 2.2, "weapon": "kanone",  "cost": { "geld": 2000, "eisen": 300, "kohle": 120, "gold": 50 }, "time": 30, "from": "panzerfabrik", "research": "schwere_panzer", "sprite": "unit.schwerer_panzer" },
+    "kampfhubschrauber": { "name": "Stuka (Ju 87)", "sight": 9, "armor": "luft", "hp": 280, "speed": 3.6, "range": 4, "damage": 70, "rof": 4.0, "splash": 1.0, "weapon": "bombe", "cost": { "geld": 1200, "eisen": 120, "kohle": 60, "gold": 10 }, "time": 18, "from": "flugfeld", "research": "luftfahrt", "sprite": "unit.kampfhubschrauber" },
+    "kampfjet":          { "name": "Jagdflugzeug (Bf 109)",          "sight": 10, "armor": "luft", "hp": 220, "speed": 6.0, "range": 5.5, "damage": 26, "rof": 1.0, "weapon": "luftkanone", "cost": { "geld": 1600, "eisen": 150, "kohle": 80, "gold": 25 }, "time": 22, "from": "flugfeld", "research": "duesenantrieb", "sprite": "unit.kampfjet" },
+    "patrouillenboot":   { "name": "Schnellboot",   "sight": 9, "domain": "see", "armor": "leicht", "hp": 260,  "speed": 3.4, "range": 5,  "damage": 14, "rof": 0.5, "weapon": "mg", "cost": { "geld": 600, "eisen": 60, "kohle": 30 }, "time": 12, "from": "werft", "sprite": "unit.patrouillenboot" },
+    "zerstoerer":        { "name": "Zerstörer",         "sight": 9, "domain": "see", "armor": "schwer", "hp": 900,  "speed": 2.2, "range": 7,  "damage": 55, "rof": 2.0, "weapon": "schiffskanone", "cost": { "geld": 1800, "eisen": 250, "kohle": 100, "gold": 20 }, "time": 25, "from": "werft", "research": "marine", "sprite": "unit.zerstoerer" },
+    "raketenkreuzer":    { "name": "Schwerer Kreuzer",    "sight": 10, "domain": "see", "armor": "schwer", "hp": 1100, "speed": 1.8, "range": 11, "minRange": 3, "damage": 80, "splash": 1.2, "rof": 4.5, "weapon": "schiffsgeschuetz", "cost": { "geld": 2600, "eisen": 300, "kohle": 120, "gold": 50 }, "time": 32, "from": "werft", "research": "marine", "sprite": "unit.raketenkreuzer" },
+    "miliz":           { "name": "Miliz",          "sight": 5, "armor": "infanterie", "hp": 50,   "speed": 1.4, "range": 3.5, "damage": 7,  "rof": 1.1, "weapon": "gewehr",  "cost": { "geld": 60 },                                        "time": 5,  "from": "none",         "sprite": "unit.miliz" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_info": "Forschungsprojekte. Gelten für das ganze Reich. Benötigen ein Forschungszentrum in einer eigenen Provinz. requires = vorher nötige Forschung. time in Sekunden. Die Wirkung ist im Code an die id gebunden.",
+  "research": {
+    "bergbau":       { "name": "Moderne Fördertechnik",     "desc": "Bergwerke fördern 30 % mehr.",                                  "cost": { "geld": 1500, "eisen": 100 },               "time": 60 },
+    "kraftwerk":     { "name": "Effiziente Turbinen",       "desc": "Kraftwerke liefern 50 % mehr Strom und brauchen halb so viel Kohle.", "cost": { "geld": 1200, "kohle": 80 },          "time": 50 },
+    "verwaltung":    { "name": "Steuerreform",              "desc": "Alle Dörfer zahlen 15 % mehr.",                                  "cost": { "geld": 2000 },                             "time": 70 },
+    "aufklaerung":   { "name": "Funkmesstechnik",           "desc": "Alle Einheiten und Gebäude sehen 3 Felder weiter.",              "cost": { "geld": 1500, "gold": 20 },                 "time": 60 },
+    "munition":      { "name": "Panzerbrechende Munition",  "desc": "Einheiten und Türme richten 15 % mehr Schaden an.",              "cost": { "geld": 2000, "eisen": 150, "gold": 20 },   "time": 80 },
+    "panzerung":     { "name": "Zusatzpanzerung",           "desc": "Aufgeschraubte Panzerplatten: Fahrzeuge erleiden 20 % weniger Schaden.",                       "cost": { "geld": 2500, "eisen": 250, "gold": 30 },   "time": 90,  "requires": "munition" },
+    "befestigung":   { "name": "Stahlbeton",                "desc": "Gebäude erleiden 25 % weniger Schaden, Reparaturen kosten die Hälfte.", "cost": { "geld": 1800, "eisen": 200 },     "time": 60 },
+    "luftfahrt":     { "name": "Luftfahrt",                 "desc": "Schaltet Flugfeld und Sturzkampfbomber (Ju 87) frei.",                  "cost": { "geld": 2500, "eisen": 200, "gold": 40 },   "time": 90 },
+    "duesenantrieb": { "name": "Jagdflieger",               "desc": "Schaltet das Jagdflugzeug (Bf 109) frei.",                                     "cost": { "geld": 3500, "eisen": 300, "gold": 80 },   "time": 120, "requires": "luftfahrt" },
+    "marine":        { "name": "Marinetechnik",             "desc": "Schaltet Zerstörer und Schweren Kreuzer frei.",                    "cost": { "geld": 2500, "eisen": 250, "gold": 40 },   "time": 90 },
+    "schwere_panzer":{ "name": "Schwere Panzer",            "desc": "Schaltet das Neubaufahrzeug frei.",                                "cost": { "geld": 3000, "eisen": 300, "gold": 50 },   "time": 100, "requires": "munition" }
+  }
+}
